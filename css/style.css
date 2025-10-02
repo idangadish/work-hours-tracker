@@ -5,11 +5,16 @@ body, html {
 }
 
 .profile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: cadetblue;
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
   padding: 0 10px;
+  z-index: 1000;
 }
 
 
@@ -36,11 +41,30 @@ body, html {
   gap: 10px; 
 }
 
+#sidebar-container {
+    position: fixed;
+    margin-top: 30px;
+    right: 0; 
+    height: 100vh;
+    width: 280px;
+    display: none;
+    z-index: 1000;
+    overflow-y: auto;
+
+}
+
+#sidebar-container.show {
+    display: block;
+    transform: translateX(0); 
+}
+
+
 
 .container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 30px;
   padding: 10px; 
 }
 
@@ -51,6 +75,7 @@ body, html {
     justify-content: flex-start;
     direction: rtl;
     gap: 10px;
+    margin-top: 30px;
     width: 100%;
     padding: 0 10px;
     opacity: 0; 
@@ -66,24 +91,25 @@ body, html {
 }
 
 
-.form-floating input {
-    text-align: right; 
-}
-
-.form-check {
-    display: flex;
-    justify-content: flex-start; 
-    gap: 30px;
-}
-
 .container-column > div {
+    width: 90%; 
+}
+
+
+.container-column > .sign-in-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    direction: rtl;
+    gap: 10px;
     width: 30%; 
 }
+
 
 h1{
   font-weight: bold;
   font-size: 2.5rem;
-  padding-top: 30px;
+  margin-top: 20px;
 }
 
 .title {
@@ -91,7 +117,6 @@ h1{
   font-family: "Varela Round", sans-serif;
   text-align: center;
   margin: 1.5rem;
-
   animation-name: moveUp;
   animation-duration: 3s;
   animation-fill-mode: forwards;
@@ -148,4 +173,8 @@ h1{
     border: none;
     border-radius: 5px;
     padding: 5px;
+}
+
+#monthsTable th{
+  color: cadetblue;
 }

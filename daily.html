@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>הזנת שעות</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="profile-bar"></div>
+<div id="sidebar-container"></div>
+
+
+    <div class="container-column">
+        <div class=" title">
+            <h1>הזנת שעות עבודה יומי</h1>
+        </div>
+        
+    <div class="row mb-3">
+        <div class="col">
+            <label for="date" class="form-label">תאריך:</label>
+            <input type="date" class="form-control rounded-2 mb-2" id="date">
+        </div>
+        <div class="col">
+            <label for="day" class="form-label">יום:</label>
+            <input type="text" class="form-control rounded-2 mb-2" id="day" placeholder="למשל: יום ראשון">
+        </div>
+    </div>
+
+<div class="row mb-3">
+    <div class="col">
+        <label for="startTime" class="form-label">:שעת התחלה</label>
+        <div class="input-group">
+            <input type="time" class="form-control ms-3 rounded-2" id="startTime">
+            <button class="btn btn-secondary rounded-2" type="button" id="setStartBtn">התחלת עבודה</button>
+        </div>
+    </div>
+    <div class="col">
+        <label for="endTime" class="form-label">שעת סיום:</label>
+        <div class="input-group">
+            <input type="time" class="form-control ms-3 rounded-2" id="endTime">
+            <button class="btn btn-secondary rounded-2" type="button" id="setEndBtn">סיום עבודה</button>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-primary m-4" id="addTimeBtn">הוסף שעות</button>
+
+
+    <div>
+        <p>סה"כ שעות היום: <span id="dailyTotal">0</span></p>
+    </div>
+
+        <div>
+        <p>סה"כ שעות נוספות: <span id="dailyOverTimeTotal">0</span></p>
+    </div>
+</div>
+
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/profile-bar.js" charset="utf-8"></script>
+  <script src="./js/daily.js" charset="utf-8"></script>
+</body>
+</html>

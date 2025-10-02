@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>דוחות חודשיים</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="profile-bar"></div>
+<div id="sidebar-container"></div>
+    <div class="container-column">
+        <div class=" title">
+            <h1>דוחות חודשיים</h1>
+        </div>
+<div class="year-picker mb-3">
+    <label for="yearInput">בחר שנה:</label>
+    <input type="number" id="yearInput" min="2000" value="">
+</div>
+
+    <table class="table table-striped" id="monthsTable">
+        <thead>
+        <tr>
+            <th>חודש</th>
+            <th>דוח</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div id="reportContainer" class="mt-4"></div>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/profile-bar.js" charset="utf-8"></script>
+<script src="./js/reports.js"></script>
+</body>
+</html>
