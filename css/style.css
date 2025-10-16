@@ -83,6 +83,7 @@ body, html {
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-delay: 1.5s; 
+    height: 100vh;
 }
 
 @keyframes fadeInForm {
@@ -96,13 +97,21 @@ body, html {
 }
 
 
-.container-column > .sign-in-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    direction: rtl;
-    gap: 10px;
-    width: 30%; 
+ .sign-in-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  text-align: right;
+  height: 50%;
+  width: 100%;
+  margin: 20px auto;
+}
+
+label {
+  font-weight: bold;
+  color: cadetblue;
 }
 
 
@@ -110,6 +119,11 @@ h1{
   font-weight: bold;
   font-size: 2.5rem;
   margin-top: 20px;
+}
+
+.small-title{
+  font-family: "Varela Round", sans-serif;
+  font-size: 2rem;
 }
 
 .title {
@@ -123,14 +137,41 @@ h1{
   animation-timing-function: ease-out;
 }
 
-.btn{
-    background-color: cadetblue;
+.btn {
+  background-color: cadetblue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  width: 20%;
 }
 
-.form-floating {
-    border: 3px solid cadetblue; 
-    border-radius: 2%;   
+.text-input {
+  border: 2px solid cadetblue;
+  border-radius: 8px;
+  padding: 10px;
+  outline: none;
+  transition: border-color 0.3s;
+  width: 40%;
 }
+
+.text-input::placeholder {
+  color: #a0a0a0;
+  font-size: 0.95rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  direction: rtl;
+  justify-content: flex-start; 
+  width: 40%; 
+}
+
 
 @keyframes moveUp {
   from { transform: translateY(200px); opacity: 0; } 
@@ -178,3 +219,26 @@ h1{
 #monthsTable th{
   color: cadetblue;
 }
+
+
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .small-title{
+    font-size: 1.5rem;
+  }
+
+  .text-input {
+    width: 50%;
+}
+
+
+  .btn {
+    font-size: 1rem;
+    width: 40%
+  }
+}
+
